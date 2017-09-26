@@ -1,0 +1,10 @@
+.DS_Store
+BLServiceFusionWin32-64/
+.idea
+*.pyc
+db.sqlite3
+out/
+*.zip
+docs/
+upload/
+backup/

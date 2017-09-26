@@ -1,0 +1,138 @@
+body {
+	direction: rtl;
+}
+
+.suit-columns {
+	padding-left: 	40px;
+	padding-right: 200px;
+}
+
+#suit-left {
+	right: inherit;
+	left: 240px;
+	margin-left: inherit;
+	margin-right: -100%;
+}
+
+.suit-columns .suit-column {
+	float: right;
+}
+
+#wrap {
+	background: url(../img/bg_right_white.gif) top right repeat-y;
+}
+
+.left-nav>ul>li>a i {
+	margin-left: 10px;
+	margin-right: inherit;
+	opacity: .8;
+}
+
+.icon-chevron-right {
+	background-position: -432px -72px;
+}
+
+.icon-chevron-left {
+	background-position: -456px -72px;
+}
+
+.left-nav>ul>li:not(.active):hover>ul {
+	right: 180px;
+	left: inherit;
+	
+	margin-left: -250px;
+	margin-right: inherit;
+}
+
+.inner-two-columns .inner-right-column {
+	float: left;
+}
+
+.inner-two-columns .inner-center-column {
+	margin-right: inherit;
+	margin-left: 200px
+}
+
+.form-horizontal .control-group .controls {
+	border-left: none;
+	border-right: 1px solid #ecedee;
+}
+
+.form-horizontal .control-group .controls .selector .selector-available, .form-horizontal .control-group .controls .selector .selector-chooser, .form-horizontal .control-group .controls .selector .selector-chosen {
+	float:right;
+}
+
+.form-horizontal .control-group .controls .selector .selector-available h2, .form-horizontal .control-group .controls .selector .selector-chooser h2, .form-horizontal .control-group .controls .selector .selector-chosen h2 {
+	margin-left: inherit;
+	margin-right: 5px;
+}
+
+.form-horizontal .control-group .controls .selector .selector-filter {
+	margin-right: inherit;
+	margin-left: 14px;
+}
+
+.form-horizontal .control-group .controls .selector .selector-filter label {
+	right: inherit;
+	left: 0;
+	margin-right: inherit;
+	margin-left: -10px;
+}
+
+.menu-box li a i {
+	margin-right: inherit;
+	margin-left: 7px;
+}
+
+.help-inline {
+	padding-left: inherit;
+	padding-right: 5px;
+}
+
+.left-nav>ul>li ul li a {
+	padding-right: 27px;
+	padding-left: 0px;
+}
+
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.nav-tabs-suit li:first-child {
+	margin-left: inherit;
+	margin-right: 10px;
+}
+
+.header #user-tools {
+	float:left;
+	padding: 12px 0 20px 0;
+}
+
+.header .header-content {
+	float:right;
+	padding: 7px 30px 0 30px;
+}
+
+.header #user-tools .user-links {
+	margin-right: 15px;
+}
+
+.header .header-content.header-content-first {
+	border-left: none;
+	margin-right: inherit;
+	border-right: 1px solid #45494c;
+	margin-right: 20px;
+}
+
+.header .header-content .header-column {
+	float:right;
+}
+
+.header #branding {
+	float: right;
+}
+
+.object-tools {
+	float:left;
+}

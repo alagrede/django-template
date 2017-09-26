@@ -1,0 +1,160 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" media="screen"/>
+  <link href="{% static 'css/daterangepicker/daterangepicker-bs3.css'%}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block extrahead %}
+  {{ block.super }}
+  <script type="text/javascript" src="{% static 'javascript/angular/angular.min.js' %}"></script>
+  <script src="{% static 'javascript/daterangepicker/daterangepicker.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}dashboard{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+
+
+
+<div id="content-main" class="flex row-fluid">
+
+	<div class="box-body" ng-controller="MainCtrl">
+
+  		<h2>Etats des demandes</h2>
+  		<br>
+
+		<div class="inner-center-column">
+
+			<div class="box box-primary">
+				<div class="box-body">
+
+					<!-- Text search -->
+					<div style="float:left">
+						<div class="filter-group">
+							<i class="fa fa-search"></i>
+							<input ng-model="search_text" type="text" class="form-control" placeholder="Numéro de dossier">
+						</div>
+					</div>
+
+                    <!-- Date range -->
+                    <div class="filter-group" style="float:left">
+                        <i class="fa fa-calendar"></i>
+                        <input type="text" class="form-control" id="periode"  placeholder="Période de recherche" ng-model="periode" />
+                    </div><!-- /.form group -->
+
+					<div class="filter-group">
+						&nbsp;&nbsp;
+						<button class="btn btn-primary" ng-click="filterPeriode()">Filtrer</button>
+					</div>
+
+				</div>
+			</div>
+			<br>
+	        <table class="table table-striped table-bordered table-hover table-condensed">
+	        	<thead>
+	        	<tr>
+	        		<th>En cours</th>
+	        		<th>Fini</th>
+	        	</tr>
+	        	</thead>
+	        	<tr>
+	        		<td>
+					    <div ng-repeat="task in tasks[1] | filter:search_text">
+				  			<a id="{$task.obj$}" href="/admin/demande/task/{$task.id$}/">{$task.obj$}</a>
+						</div>
+	        		</td>
+		       		<td>
+					    <div ng-repeat="task in tasks[2] | filter:search_text">
+				  			<a href="/admin/demande/task/{$task.id$}/">{$task.obj$}</a>
+						</div>
+	        		</td>
+	        	</tr>
+	        </table>
+	    </div>
+    </div>
+
+</div>
+
+
+	
+
+
+<script type="text/javascript">
+  // Configuration d'Angular
+  var myApp = angular.module('myApp', []);
+
+
+  // Code du dashboard
+  myApp.controller('MainCtrl', function ($scope, $http) {
+    
+    $scope.tasks = [];
+
+    $scope.search_text = "";
+    $scope.periode = "";
+
+    //$scope.maVariable = "My first test";
+    //$scope.resetVar = function () {
+    //  $scope.maVariable = ""; 
+    //}
+
+    $scope.filterPeriode = function() {
+		$scope.periode = $("#periode").val();
+		loadAllStates();
+    }
+
+    function loadAllStates() {
+	    var index;
+		var states = ["1", "2"];
+		for (index = 0; index < states.length; ++index) {
+		    loadAuto(states[index], $scope.periode);
+		}    	
+    }
+
+	function loadAuto(state, periode) {
+
+		$http({method: 'GET', url: "{% url 'loadAjax' %}?state=" + state + "&periode=" + periode}).then(
+			function successCallback(response) {
+				$scope.tasks[state] = response.data;
+		  	},
+		  	function errorCallback(response) {
+			  	alert(response.responseText);
+		  	}
+		);
+	}
+	
+	loadAllStates();
+
+
+
+  });
+
+
+
+  // L'initialisation différé d'Angular
+  angular.element(document).ready(function() {
+    angular.bootstrap(document.getElementById("content-main"), ['myApp']);
+    $('#periode').daterangepicker({format: 'YYYY/MM/DD'});
+  });
+
+  myApp.config(function($interpolateProvider) {
+    $interpolateProvider.startSymbol('{$');
+    $interpolateProvider.endSymbol('$}');
+  });
+
+</script>
+
+
+{% endblock %}
+
+
+{% block sidebar %}
+  <div id="content-related">
+  </div>
+{% endblock %}

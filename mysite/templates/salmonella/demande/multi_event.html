@@ -1,0 +1,6 @@
+{% for object in objects %}
+    <div>
+    	<img id="{{object.0.classname}}_{{object.0.id}}" class="delete_one_salmonella" src="/static/img/trash-delete.png" alt="Lookup" height="10" width="10" /> <a href="{{ object.1 }}" >{{ object.0 }}</a>
+    	{% if not forloop.last %},&nbsp;{% endif %}
+    </div>
+{% endfor %}

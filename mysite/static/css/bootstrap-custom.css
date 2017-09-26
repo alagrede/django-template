@@ -1,0 +1,251 @@
+﻿@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular-webfont.eot');
+    src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff'),
+         url('../fonts/opensans-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald.eot');
+    src: url('../fonts/Oswald.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Oswald.woff2') format('woff2'),
+         url('../fonts/Oswald.woff') format('woff'),
+         url('../fonts/Oswald.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.readLabel {
+	font-weight: bold;
+}
+
+.readLabel1 {
+	font-weight: bold;
+	width:15%;
+}
+.tdquarter {
+	width:35%;
+}
+
+.read-table tbody td {
+	padding-left: 20px;
+}
+
+.box2 {
+	width:49%;
+	float:left;
+	margin-left: 1%;
+}
+
+.box5 {
+	width:48%;
+	float:left;
+	margin-left: 1%;
+}
+.box3 {
+	width:49%;
+	float:left;
+	margin-left: 1%;
+}
+
+.box4 {
+	width:98%;
+	float:left;
+	margin-left: 1%;
+}
+
+.sronly {
+	display: none;
+}
+
+.btn {
+	border-radius: 0 7px; 
+	font-family: "open_sansregular";
+}
+
+.header {
+	background: url("../img/connexion_trame.png") no-repeat top left fixed !important;
+	background-color: #2f87c3 !important;
+}
+
+.user-links a{
+
+color:black;
+background-color: #ffffff;
+
+border-radius: 0 7px; 
+padding: 3px 15px 3px 15px;
+
+text-shadow: none;
+display: inline-block;
+font-weight: normal;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+
+white-space: nowrap;
+padding: 3px 12px;
+transition: all 0.2s ease-out;
+
+}
+
+.user-links a:hover {
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+transition: all 0.2s ease-out;
+	background: none;
+background-color: #e0e0e0;
+outline: 0!important;
+	text-decoration: none;
+}
+
+h2.legend {
+	font-weight: bold;
+	float: left;
+	font-size: 14px;
+	font-family: "open_sansregular";
+	margin-left: 10px;
+	color: #2a80b9;
+}
+
+#site-name {
+	font-family: "Oswald";
+}
+
+.left-nav a {
+	font-family: "open_sansregular";
+	font-weight: bold;
+}
+
+.form-horizontal fieldset .legend {
+	margin:inherit;
+	position: relative;
+	background-color: transparent;
+}
+
+.form-horizontal fieldset {
+	margin-top: 0px;
+}
+
+.header:after {
+	width: 100%;
+	height: 4px;
+	content: " ";
+	display: table;
+	position: absolute;
+	top:42px;
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#eabdd8, endColorstr=#5bcbf5);
+	background-image: -moz-linear-gradient(left, #eabdd8 0%, #5bcbf5 50%, #276e9c 100%);
+	background-image: linear-gradient(left, #eabdd8 0%, #5bcbf5 50%, #276e9c 100%);
+	background-image: -webkit-linear-gradient(left, #eabdd8 0%, #5bcbf5 50%, #276e9c 100%);
+	background-image: -o-linear-gradient(left, #eabdd8 0%, #5bcbf5 50%, #276e9c 100%);
+	background-image: -ms-linear-gradient(left, #eabdd8 0%, #5bcbf5 50%, #276e9c 100%);
+	background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, #eabdd8), color-stop(50%, #5bcbf5), color-stop(100%, #276e9c));
+}
+
+
+.nav-tabs-suit {
+	border-bottom: 4px solid #2f87c3;
+}
+
+.nav-tabs-suit li a, .nav-tabs-suit li a:hover {
+	border-bottom: none;
+}
+.nav-tabs>li {
+	margin-bottom: 0px;
+}
+
+.nav-tabs>.active>a, .nav-tabs>.active>a:hover, .nav-tabs>.active>a:focus {
+	border-bottom: none;
+}
+.nav-tabs-suit li a, .nav-tabs-suit li a:hover {
+	border-bottom: none;
+}
+
+
+.nav-tabs-suit li.active a {
+	background-color: #2f87c3;
+	color: white;	
+}
+
+.nav-tabs-suit li a {
+	border-radius: 7px 2px 0px 0px;	
+}
+
+.nav-tabs-suit li a:hover {
+	text-decoration: none;
+}
+
+.nav-tabs-suit li.active a:hover, .nav-tabs-suit li.active a:focus  {
+	background-color: #2f87c3;
+	color: white;		
+}
+
+
+.left-nav>ul>li.active>a:after {
+	content: none;
+}
+
+.left-nav>ul>li.active>a {
+	background-image: none;
+	background-color: #2f87c3;
+}
+
+.left-nav>ul>li>a {
+	padding: 10px 10px 10px 13px
+}
+
+
+.header a.white {
+	color: white!important;
+}
+
+.header a.lang_selection {
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+/* Pour mettre les listes de checkbox à l'horizontal */
+.controls ul {
+	margin-left: 0px;
+}
+.controls li {
+	display: table-cell;
+	list-style: none;
+	padding-right: 15px;
+}
+
+.controls li label {
+	display: inherit;
+}
+
+
+.filter-group .fa {
+	position: relative;
+	float: left;
+	margin-top: 7px;
+	margin-right: 7px;
+	margin-left: 10px;
+}
+
+
+.daterangepicker .calendar th, .daterangepicker .calendar td {
+	min-width: inherit!important;
+}
+
+.daterangepicker .ranges .input-mini {
+	width: inherit!important;
+}
+
+.daterangepicker .ranges .range_inputs>div:nth-child(2) {
+	padding-left: 0px!important;
+}
+
+.help-btn {
+	margin-bottom: 20px;
+}
